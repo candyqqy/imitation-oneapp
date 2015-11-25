@@ -1,0 +1,26 @@
+{
+  "name": "imitation-oneapp",
+  "version": "1.0.0",
+  "description": "imitation one",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/candyqqy/imitation-oneapp.git"
+  },
+  "keywords": [
+    "one"
+  ],
+  "author": "violet_qqy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/candyqqy/imitation-oneapp/issues"
+  },
+  "homepage": "https://github.com/candyqqy/imitation-oneapp",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
+}
