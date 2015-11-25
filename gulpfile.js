@@ -1,5 +1,19 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    nodemon = require('gulp-nodemon');
+//, jshint = require('gulp-jshint')
 
-gulp.task('default',function(){
-	//将你的默认的任务代码放在这
+//gulp.task('lint', function () {
+//    gulp.src('./**/*.js')
+//        .pipe(jshint())
+//})
+
+gulp.task('default', function() {
+    nodemon({
+        script: 'index.js'
+        //, ext: 'html js'
+        //, ignore: ['ignored.js']
+        //, tasks: ['lint']
+    }).on('start', function() {
+        console.log('restarted!')
+    })
 });
