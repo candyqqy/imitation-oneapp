@@ -1,3 +1,64 @@
-//
-   Created by qqy on 15/11/25.
-
+doctype html
+html(lang='zh-cmn-Hans')
+    include ./template/head.jade
+    body
+        .container
+            header.one-header
+                .one-logo
+                    a.one-brand(href='http://localhost:3000/')
+            section#index.one-content(style='display:none')
+                figure.one-picture
+                    img(src='images/picture/custom.jpg')
+                    figcaption.one-picture-footer
+                        | 海鸥
+                        br
+                        | 跑焦·朱树芃 作品
+                        .one-no vol.1142
+                .one-motto
+                    .one-motto-content
+                        | 后来明白，我们永远无法成为别人满意的那个自己，可如果坚持做喜欢的自己，终会遇见喜欢你的人。其实到最后，我们都是在寻找同类，就像溪流汇入江海，光束拥抱彩虹。by 陈亚豪
+                    .one-motto-date
+                        .day 26
+                        .month Nov 2015
+            section#article.one-content(style='display:none')
+                .one-principal
+                    p #{articlePrincipal}
+                article
+                    h2 #{articleTitle}
+                    i #{articleAuthor}
+                    each item in articleContent
+                        p.one-article #{item.content}
+            section#question.one-content
+                .one-ask
+                    .ask-icon
+                    article
+                        h4 #{questionTitle}
+                        p #{questionAsk}
+                .one-answer
+                    .answer-icon
+                    article
+                        h4 #{questionAnswer}
+                        each item in questionContent
+                            p #{item.content}
+            section#goods.one-content(style='display:none')
+                figure.one-goods
+                    img(src='images/picture/zEnMd.jpg')
+                    figcaption
+                        | 铅笔刀罐子
+                        br
+                        p 一款可以将铅笔屑完整储存的铅笔刀。优美的木屑不但有装饰功能，还能记录你奋笔疾书的工作量。
+            nav.one-navbar
+                .container
+                    .row
+                        .col-xs-3.navbar-active(href='#index' data-toggle='tab')
+                            span.glyphicon.glyphicon-home
+                            | 首页
+                        .col-xs-3(href='#article' data-toggle='tab')
+                            span.glyphicon.glyphicon-book
+                            | 文章
+                        .col-xs-3(href='#question' data-toggle='tab')
+                            span.glyphicon.glyphicon-question-sign
+                            | 问题
+                        .col-xs-3(href='#goods' data-toggle='tab')
+                            span.glyphicon.glyphicon-gift
+                            | 东西

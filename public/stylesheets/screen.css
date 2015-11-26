@@ -2,67 +2,397 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
 html {
-  line-height: 1;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/* line 24, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+body {
+  margin: 0;
 }
 
-/* line 26, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
+td,
+th {
+  padding: 0;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.one-header {
+  position: fixed;
+  top: 0;
+  margin: 0 -10px;
+  width: 100%;
+  height: 50px;
+  background-color: #0095e4;
+  z-index: 1;
+}
+
+.one-logo {
+  padding: 5px 15px;
+  height: 40px;
+}
+
+.one-brand {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: inherit;
+  background-image: url("../images/icon/fp-logo.png");
+  background-size: 100px;
+}
+
+.one-content {
+  margin-top: 60px;
+}
+.one-content article {
+  padding: 0 10px;
+}
+
+.one-picture {
+  margin: 0;
+}
+.one-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.one-picture-footer {
+  padding: 10px;
+  line-height: 1.67;
+  text-align: right;
+  overflow: hidden;
+}
+
+.one-no {
+  margin-top: -10px;
+  float: left;
+  font-size: 2rem;
+}
+
+.one-motto {
+  display: table;
+  background-color: #f2f2f2;
+  margin-bottom: 65px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.one-motto-content {
+  display: table-cell;
+  margin-right: 100px;
+  padding: 30px 20px;
   vertical-align: middle;
+  width: 100%;
+  line-height: 1.67;
 }
 
-/* line 30, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
+.one-motto-date {
+  width: 100px;
+  float: right;
+  padding: 50px 0;
+  text-align: center;
+  color: #0095e4;
 }
-/* line 103, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+.one-motto-date .day {
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-/* line 116, ../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
+.one-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0 -10px;
+  text-align: center;
+  border-top: 1px solid #f2f2f2;
+  background-color: white;
+}
+.one-navbar .container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.one-navbar .container div {
+  height: 50px;
+  line-height: 50px;
+}
+.one-navbar span {
+  padding-right: 5px;
+}
+
+.navbar-active {
+  color: #0095e4;
+  background-color: #f2f2f2;
+  border: 1px solid white;
+}
+
+.one-principal {
+  margin: 10px 0;
+  color: gray;
+  line-height: 1.67;
+  background: url("../images/icon/principal-icon1.png") no-repeat left top;
+}
+.one-principal p {
+  padding: 25px 30px;
+  margin: 0;
+  background: url("../images/icon/principal-icon.png") no-repeat right bottom;
+}
+
+.one-article {
+  margin-top: 30px;
+  line-height: 1.67;
+  word-break: normal;
+  white-space: pre-wrap;
+}
+
+.one-ask {
+  border-bottom: 1px #f2f2f2 solid;
+}
+.one-ask .ask-icon {
+  width: 75px;
+  height: 40px;
+  margin: 0 auto 15px;
+  background: url("../images/icon/cuestion.png") no-repeat left;
+}
+
+.one-answer {
+  padding: 10px 0;
+}
+.one-answer .answer-icon {
+  width: 75px;
+  height: 40px;
+  margin: 0 auto 15px;
+  background: url("../images/icon/cuestion.png") no-repeat right;
+}
+
+.one-goods {
+  margin: 0;
+}
+.one-goods img {
+  width: 100%;
+}
+.one-goods figcaption {
+  font-size: 2.5rem;
+}
+.one-goods p {
+  font-size: 1.5rem;
 }
