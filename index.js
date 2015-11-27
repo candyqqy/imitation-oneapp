@@ -68,7 +68,7 @@ app.get('/', function (req, res) {
                     var year = $('.one-pubdate .may').text();
                     var motto = $('.one-cita').text();
                     res.render('index', {
-                        title: 'One 一个',
+                        title: '「 One · 一个 」',
                         articleContent: articleContent,
                         articlePrincipal: articlePrincipal,
                         articleTitle: articleTitle,
@@ -88,7 +88,4 @@ app.get('/', function (req, res) {
 //    title: 'One首页'
 //});
 //res.send('Hello World!');
-})
-;
-
-
+});
