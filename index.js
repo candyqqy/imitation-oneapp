@@ -53,7 +53,7 @@ app.get('/', function (req, res) {
                         });
                     });
                     var questionTitle = $('.one-cuestion h4:nth-child(2)').text();
-                    var questionAsk = $('.cuestion-contenido').text();
+                    var questionAsk = $('.cuestion-contenido:nth-child(3)').text();
                     var questionAnswer = $('.one-cuestion h4:nth-child(6)').text();
                     var questionContent = [];
                     $('.cuestion-contenido p').each(function (item, element) {
