@@ -68,7 +68,7 @@ app.get('/', function (req, res) {
                     var year = $('.one-pubdate .may').text();
                     var motto = $('.one-cita').text();
                     res.render('index', {
-                        title: '「 One · 一个 」',
+                        title: '「 ONE · 一个 」',
                         articleContent: articleContent,
                         articlePrincipal: articlePrincipal,
                         articleTitle: articleTitle,
