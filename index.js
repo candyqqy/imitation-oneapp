@@ -89,3 +89,49 @@ app.get('/', function (req, res) {
 //});
 //res.send('Hello World!');
 });
+
+//var url = require('url');
+//url.parse('http://www.baidu.com/news',true,true);
+//var path=url.format({
+//    protocol: 'http:',
+//    hostname:'www.baidu.com',
+//    port:'80',
+//    pathname :'/news',
+//    query:{page:1}
+//});
+//
+//console.log(path);
+
+//resolve函数的参数是两个路径，第一个路径是开始的路径或者说当前路径，
+// 第二个则是想要去往的路径，返回值是一个组装好的url
+//url.resolve('http://example.com/', '/one')  // 'http://example.com/one'
+//url.resolve('http://example.com/one', '/two') // 'http://example.com/two'
+
+//var util = require('util');
+//var result = util.inspect(object);
+//console.log(result);
+
+//var io = require('socket.io')(3000);
+//
+//io.on('connection', function (err,socket) {
+//    //连接成功...
+//    if (err) {
+//        return next(err);
+//    }
+//    console.log('连接成功...');
+//    //socket.on('disconnect', function () {
+//    //    //用户已经离开...
+//    //});
+//});
+
+//var express = require('express');
+//var app = express();
+//app.get('/',function(req,res){
+//    res.status(200).send('欢迎来到汇智网学习！');
+//});
+//var server = require('http').createServer(app);
+//var io = require('socket.io')(server);
+//io.on('connection',function(socket){
+//
+//});
+//server.listen(80);
