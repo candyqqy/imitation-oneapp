@@ -8,16 +8,16 @@ var gulp = require('gulp'),
 //        .pipe(jshint())
 //})
 
-gulp.task('compass', function () {
+gulp.task('compass', function() {
     gulp.src('./public/sass/*.scss')
         .pipe(compass({
             config_file: './public/config.rb',
             css: './public/stylesheets',
             sass: './public/sass'
-            //image: 'images'
-            //javascript: 'javascript'
+                //image: 'images'
+                //javascript: 'javascript'
         }))
-        .on('error', function (error) {
+        .on('error', function(error) {
             // Would like to catch the error here
             console.log(error);
             this.emit('end');
@@ -26,17 +26,17 @@ gulp.task('compass', function () {
         .pipe(gulp.dest('./public/stylesheets'));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     gulp.watch('./public/sass/*.scss', ['compass']);
 });
 
-gulp.task('node', function () {
+gulp.task('node', function() {
     nodemon({
-        script: 'index.js'
-        //, ext: 'html js'
-        //, ignore: ['ignored.js']
-        //, tasks: ['compass','watch']
-    }).on('start', function () {
+        script: './bin/www'
+            //, ext: 'html js'
+            //, ignore: ['ignored.js']
+            //, tasks: ['compass','watch']
+    }).on('start', function() {
         console.log('restarted!')
     })
 });
