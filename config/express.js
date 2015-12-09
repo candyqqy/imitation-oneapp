@@ -1,6 +1,4 @@
 var express = require('express'),
-    superagent = require('superagent'),
-    cheerio = require('cheerio'),
     logger = require('morgan');
 
 module.exports = function() {
