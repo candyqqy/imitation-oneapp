@@ -4,8 +4,8 @@ var express = require('express'),
 
 module.exports = function () {
 
-    console.log('connect mongodb...');
-    mongoose.connect('mongodb://localhost/oneapp');
+    //console.log('connect mongodb...');
+    //mongoose.connect('mongodb://localhost/oneapp');
 
     console.log('init expesss...');
     var app = express();
