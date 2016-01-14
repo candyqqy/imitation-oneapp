@@ -1,7 +1,12 @@
 var express = require('express'),
-    logger = require('morgan');
+    logger = require('morgan'),
+    mongoose = require('mongoose');
 
-module.exports = function() {
+module.exports = function () {
+
+    console.log('connect mongodb...');
+    mongoose.connect('mongodb://localhost/oneapp');
+
     console.log('init expesss...');
     var app = express();
 
@@ -18,7 +23,7 @@ module.exports = function() {
     require('../app/routes/one.route')(app);
 
     // 处理所有未知的请求
-    app.use(function(req, res, next) {
+    app.use(function (req, res, next) {
         res.status(404);
         try {
             return res.json('Not Found');
@@ -28,7 +33,7 @@ module.exports = function() {
     });
 
     // 统一处理出错的情况
-    app.use(function(err, req, res, next) {
+    app.use(function (err, req, res, next) {
         if (!err) {
             return next()
         }
@@ -41,4 +46,4 @@ module.exports = function() {
     });
 
     return app;
-}
+};

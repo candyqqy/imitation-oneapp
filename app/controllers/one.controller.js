@@ -1,13 +1,24 @@
 var superagent = require('superagent'),
     cheerio = require('cheerio');
+
+var Goods = require('../models/goods');
+
 module.exports = {
+    test: function (req, res) {
+        Goods.statics.fetch(function (err, goods) {
+            if (err) {
+                console.log(err);
+            }
+            res.send(goods);
+        })
+    },
     //获取列表
-    list: function(req, res, next) {
+    list: function (req, res, next) {
         var oneUrl = '';
         // 用 superagent 去抓取 http: //wufazhuce.com/one/vol.1139 的内容
         // superagent.get('http://wufazhuce.com/one/vol.1143')
         superagent.get('http://wufazhuce.com/')
-            .end(function(err, sres) {
+            .end(function (err, sres) {
                 // 常规的错误处理
                 if (err) {
                     return next(err);
@@ -16,7 +27,7 @@ module.exports = {
                 var oneUrl = _$('.carousel-inner .item:first-child a').attr('href');
                 console.log(oneUrl);
                 superagent.get(oneUrl)
-                    .end(function(err, sres) {
+                    .end(function (err, sres) {
                         // 常规的错误处理
                         if (err) {
                             return next(err);
@@ -32,7 +43,7 @@ module.exports = {
                         var articleTitle = $('.articulo-titulo').text();
                         var articleAuthor = $('.articulo-autor').text();
                         var articleContent = [];
-                        $('.one-articulo .articulo-contenido p').each(function(item, element) {
+                        $('.one-articulo .articulo-contenido p').each(function (item, element) {
                             var $element = $(element);
                             articleContent.push({
                                 content: $element.text()
@@ -42,7 +53,7 @@ module.exports = {
                         var questionAsk = $('.cuestion-contenido:nth-child(3)').text();
                         var questionAnswer = $('.one-cuestion h4:nth-child(6)').text();
                         var questionContent = [];
-                        $('.cuestion-contenido p').each(function(item, element) {
+                        $('.cuestion-contenido p').each(function (item, element) {
                             var $element = $(element);
                             questionContent.push({
                                 content: $element.text()
@@ -71,4 +82,4 @@ module.exports = {
                     });
             });
     }
-}
+};
