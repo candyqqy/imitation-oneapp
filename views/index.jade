@@ -32,8 +32,7 @@ block content
                 article
                     h2 #{articleTitle}
                     i #{articleAuthor}
-                    each item in articleContent
-                        p.one-article #{item.content}
+                    p.one-article #{articleContent}
             section#question.tab-pane.one-content(role="tabpanel")
                 .one-ask
                     .ask-icon.icon-cuestion
@@ -44,8 +43,7 @@ block content
                     .answer-icon.icon-cuestion
                     article
                         h4 #{questionAnswer}
-                        each item in questionContent
-                            p #{item.content}
+                        p #{questionContent}
             section#goods.tab-pane.one-content(role="tab")
                 figure.one-goods
                     img(src='images/picture/xuemeiniang.jpg')
